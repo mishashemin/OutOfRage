@@ -45,4 +45,3 @@ class Module2ViewModel: IModule2ViewModel {
     private func setupRx() {
     }
 }
-

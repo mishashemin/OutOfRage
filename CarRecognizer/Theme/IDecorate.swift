@@ -1,6 +1,6 @@
 import Foundation
 
-public typealias ThemeStyle<T> = (T) -> ()
+public typealias ThemeStyle<T> = (T) -> Void
 
 public struct Decorator<T> {
     let object: T
@@ -29,13 +29,13 @@ public extension Decorator where T: IDecorate {
     @discardableResult
     func apply(_ styles: ThemeStyle<T>...) -> Decorator<T> {
         styles.forEach { (style) in
-            let _ = style(object)
+            _ = style(object)
         }
         return self
     }
     
     @discardableResult
-    static func +(decorator: Decorator<T>, style: @escaping ThemeStyle<T>) -> Decorator<T> {
+    static func + (decorator: Decorator<T>, style: @escaping ThemeStyle<T>) -> Decorator<T> {
         decorator.apply(style)
         return decorator
     }
@@ -82,8 +82,8 @@ public extension Decorator where T: IDecorate {
     }
 }
 
-public func +<T:IDecorate>(lhs: @escaping ThemeStyle<T>, rhs: @escaping ThemeStyle<T>) -> ThemeStyle<T> {
-    { (value: T) -> () in
+public func +<T: IDecorate>(lhs: @escaping ThemeStyle<T>, rhs: @escaping ThemeStyle<T>) -> ThemeStyle<T> {
+    { (value: T) -> Void in
         lhs(value)
         rhs(value)
     }

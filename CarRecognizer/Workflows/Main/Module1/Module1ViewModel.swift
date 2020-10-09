@@ -38,4 +38,3 @@ class Module1ViewModel: IModule1ViewModel {
     private func setupRx() {
     }
 }
-

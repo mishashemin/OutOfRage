@@ -19,7 +19,6 @@ public extension ICarRecognizerTargetType {
         #endif
     }
     
-    
     var headers: [String: String]? {
         return
             ["token": Constants.apiKey]
@@ -33,4 +32,3 @@ public extension ICarRecognizerTargetType {
         return CarRecognizerMockResponse.emptySuccess
     }
 }
-

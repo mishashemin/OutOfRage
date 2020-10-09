@@ -41,6 +41,11 @@
 		8764026A2530ABF4002A0BD4 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876402642530ABF4002A0BD4 /* StorageKeys.swift */; };
 		8764026B2530ABF4002A0BD4 /* IRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876402652530ABF4002A0BD4 /* IRepository.swift */; };
 		8764026C2530ABF4002A0BD4 /* StorageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876402662530ABF4002A0BD4 /* StorageError.swift */; };
+		8764026F2530B24B002A0BD4 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8764026E2530B24B002A0BD4 /* AccountService.swift */; };
+		876402732530FE45002A0BD4 /* ICarRecognizerTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876402722530FE45002A0BD4 /* ICarRecognizerTokenManager.swift */; };
+		876402762530FEC7002A0BD4 /* CachePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876402752530FEC7002A0BD4 /* CachePlugin.swift */; };
+		876402782530FED0002A0BD4 /* CarRecognizerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876402772530FED0002A0BD4 /* CarRecognizerPlugin.swift */; };
+		8764027E25310230002A0BD4 /* AccountServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8764027D25310230002A0BD4 /* AccountServiceError.swift */; };
 		878955932530A256001FB37A /* Encodable+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878955922530A256001FB37A /* Encodable+Data.swift */; };
 		878955B32530A2B1001FB37A /* ICarRecognizerProviderTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878955972530A2B1001FB37A /* ICarRecognizerProviderTargetType.swift */; };
 		878955B52530A2B1001FB37A /* CarRecognizerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8789559A2530A2B1001FB37A /* CarRecognizerProvider.swift */; };
@@ -67,7 +72,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0359375E72F14EDA38CC7B50 /* CarRecognizer.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CarRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0359375E72F14EDA38CC7B50 /* CarRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F406A8645FD7E44F1843772 /* IAppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAppContext.swift; sourceTree = "<group>"; };
 		13CD16D19B609269265F235A /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		15600930ECDEEF235E38604D /* Decorator+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decorator+Label.swift"; sourceTree = "<group>"; };
@@ -94,6 +99,11 @@
 		876402642530ABF4002A0BD4 /* StorageKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
 		876402652530ABF4002A0BD4 /* IRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRepository.swift; sourceTree = "<group>"; };
 		876402662530ABF4002A0BD4 /* StorageError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageError.swift; sourceTree = "<group>"; };
+		8764026E2530B24B002A0BD4 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		876402722530FE45002A0BD4 /* ICarRecognizerTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICarRecognizerTokenManager.swift; sourceTree = "<group>"; };
+		876402752530FEC7002A0BD4 /* CachePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePlugin.swift; sourceTree = "<group>"; };
+		876402772530FED0002A0BD4 /* CarRecognizerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRecognizerPlugin.swift; sourceTree = "<group>"; };
+		8764027D25310230002A0BD4 /* AccountServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountServiceError.swift; sourceTree = "<group>"; };
 		878955922530A256001FB37A /* Encodable+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+Data.swift"; sourceTree = "<group>"; };
 		878955972530A2B1001FB37A /* ICarRecognizerProviderTargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICarRecognizerProviderTargetType.swift; sourceTree = "<group>"; };
 		8789559A2530A2B1001FB37A /* CarRecognizerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarRecognizerProvider.swift; sourceTree = "<group>"; };
@@ -261,6 +271,7 @@
 				4DEEB6AEFC17955E2D1BF457 /* Resources */,
 				A2CB36BAF96828C6D63E4CEE /* Theme */,
 				878955942530A2B1001FB37A /* NetworkLayer */,
+				8764026D2530B234002A0BD4 /* Services */,
 				876402602530ABF4002A0BD4 /* Storages */,
 				284192652F90E8B0AA526A2E /* Workflows */,
 			);
@@ -347,6 +358,32 @@
 			path = Storages;
 			sourceTree = "<group>";
 		};
+		8764026D2530B234002A0BD4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8764026E2530B24B002A0BD4 /* AccountService.swift */,
+				8764027D25310230002A0BD4 /* AccountServiceError.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		876402712530FDD9002A0BD4 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				876402722530FE45002A0BD4 /* ICarRecognizerTokenManager.swift */,
+			);
+			path = Token;
+			sourceTree = "<group>";
+		};
+		876402742530FEA0002A0BD4 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				876402752530FEC7002A0BD4 /* CachePlugin.swift */,
+				876402772530FED0002A0BD4 /* CarRecognizerPlugin.swift */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
 		878955942530A2B1001FB37A /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +391,8 @@
 				878955992530A2B1001FB37A /* Provider */,
 				8789559B2530A2B1001FB37A /* Models */,
 				878955A62530A2B1001FB37A /* Errors */,
+				876402712530FDD9002A0BD4 /* Token */,
+				876402742530FEA0002A0BD4 /* Plugins */,
 				878955AF2530A2B1001FB37A /* Data */,
 			);
 			path = NetworkLayer;
@@ -682,8 +721,10 @@
 				95B8A68C9F80DEEAE74BEA19 /* IDecorate.swift in Sources */,
 				1C75E24FA4A44B6F1F74CD31 /* MainCoordinator.swift in Sources */,
 				876402672530ABF4002A0BD4 /* ItemStorage.swift in Sources */,
+				876402732530FE45002A0BD4 /* ICarRecognizerTokenManager.swift in Sources */,
 				71F981FAEFD36DE7E5721BE0 /* Module1ViewController.swift in Sources */,
 				0A5B7A9341E5F375D3427443 /* Module1ViewModel.swift in Sources */,
+				876402762530FEC7002A0BD4 /* CachePlugin.swift in Sources */,
 				4E06F99CE92E3BE992AA096B /* Module2ViewController.swift in Sources */,
 				6C7518C318849952630C7B9F /* Module2ViewModel.swift in Sources */,
 				7DAE08D700978E4D51946F76 /* NSObject+NameOfClass.swift in Sources */,
@@ -694,6 +735,7 @@
 				38516551FFE5C08800E95493 /* Theme+Label.swift in Sources */,
 				B3F70BBB924AD5F6F274611F /* Theme+TextField.swift in Sources */,
 				F1D3F331C13DE6C55E0C56B8 /* Theme.swift in Sources */,
+				8764026F2530B24B002A0BD4 /* AccountService.swift in Sources */,
 				878955C32530A2B1001FB37A /* MoyaError+Localization.swift in Sources */,
 				878955C72530A327001FB37A /* Constans.swift in Sources */,
 				2FEDA553C602F2228788F461 /* ThemeStates.swift in Sources */,
@@ -701,8 +743,10 @@
 				8F6F3B34F9A9A0658920EAC6 /* UIViewController+Extensions.swift in Sources */,
 				878955C02530A2B1001FB37A /* ICarRecognizerLocalizedError.swift in Sources */,
 				876402682530ABF4002A0BD4 /* KeychainStorage.swift in Sources */,
+				876402782530FED0002A0BD4 /* CarRecognizerPlugin.swift in Sources */,
 				8764026C2530ABF4002A0BD4 /* StorageError.swift in Sources */,
 				878955C52530A2B1001FB37A /* CarRecognizerMockResponse.swift in Sources */,
+				8764027E25310230002A0BD4 /* AccountServiceError.swift in Sources */,
 				3EC85F0BEBE597CCF0D87ED1 /* UIWindow+ChangeRoot.swift in Sources */,
 				8764026B2530ABF4002A0BD4 /* IRepository.swift in Sources */,
 			);

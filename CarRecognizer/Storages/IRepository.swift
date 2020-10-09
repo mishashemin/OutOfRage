@@ -5,8 +5,8 @@ import Moya
 protocol IRepository {
     associatedtype DBObj
     
-    typealias DBResult = (Result<DBObj, Error>) -> ()
-    typealias DBResults = (Result<[DBObj], Error>) -> ()
+    typealias DBResult = (Result<DBObj, Error>) -> Void
+    typealias DBResults = (Result<[DBObj], Error>) -> Void
         
     var list: BehaviorRelay<[DBObj]> { get }
     func getAll(_ completion: DBResults?)
@@ -15,4 +15,3 @@ protocol IRepository {
     func deleteAll(_ completion: DBResults?)
     func save(_ items: [DBObj]?, _ completion: DBResults?)
 }
-

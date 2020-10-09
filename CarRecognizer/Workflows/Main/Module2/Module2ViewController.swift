@@ -56,4 +56,3 @@ class Module2ViewController: UIViewController {
     private func bindToViewModel() {
     }
 }
-

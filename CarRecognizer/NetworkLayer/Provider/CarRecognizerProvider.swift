@@ -15,11 +15,14 @@ open class CarRecognizerProvider<Target>: MoyaProvider<Target> where Target: Moy
 
 open class CarRecognizerProviderFactory<T: TargetType> {
 
-    public func makeProvider(mockType: StubBehavior = .never, consoleLogging: Bool = false, callbackQueue: DispatchQueue? = nil, plugins: [PluginType] = [], customConfiguration: URLSessionConfiguration?) -> MoyaProvider<T> {
+    public func makeProvider(mockType: StubBehavior = .never, consoleLogging: Bool = false, callbackQueue: DispatchQueue? = nil, plugins: [PluginType] = [], customConfiguration: URLSessionConfiguration?, tokenManager: ICarRecognizerTokenManager?) -> MoyaProvider<T> {
 
         var allPlugins = plugins
         if consoleLogging {
             allPlugins += [NetworkLoggerPlugin()]
+        }
+        if let tokenManager = tokenManager {
+            allPlugins += [CarRecognizerPlugin(tokenManager: tokenManager)]
         }
         
         let session = makeSession(customConfiguration: customConfiguration)
@@ -28,11 +31,11 @@ open class CarRecognizerProviderFactory<T: TargetType> {
         return provider
     }
 
-    public func makeProvider(mockType: StubBehavior = .never, consoleLogging: Bool = false, callbackQueue: DispatchQueue? = nil, plugins: [PluginType] = [], timeoutForRequest: TimeInterval = 20.0, timeoutForResponse: TimeInterval = 40.0) -> MoyaProvider<T> {
+    public func makeProvider(mockType: StubBehavior = .never, consoleLogging: Bool = false, callbackQueue: DispatchQueue? = nil, plugins: [PluginType] = [], timeoutForRequest: TimeInterval = 20.0, timeoutForResponse: TimeInterval = 40.0 ,tokenManager: ICarRecognizerTokenManager?) -> MoyaProvider<T> {
 
         let configuration = makeConfiguration(timeoutForRequest: timeoutForRequest, timeoutForResponse: timeoutForResponse)
 
-        return makeProvider(mockType: mockType, consoleLogging: consoleLogging, callbackQueue: callbackQueue, customConfiguration: configuration)
+        return makeProvider(mockType: mockType, consoleLogging: consoleLogging, callbackQueue: callbackQueue, customConfiguration: configuration, tokenManager: tokenManager)
     }
     
     private func makeConfiguration(timeoutForRequest: TimeInterval = 20.0, timeoutForResponse: TimeInterval = 40.0) -> URLSessionConfiguration {

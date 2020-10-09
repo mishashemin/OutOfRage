@@ -6,4 +6,3 @@ extension Theme {
         button.layer.cornerRadius = 4.0
     }
 }
-

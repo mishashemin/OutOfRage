@@ -11,14 +11,14 @@ class KeychainStorage: IKeychainStorage {
 
     private let storage: KeychainSwift
 
-    //MARK: - Lifecycle
+    // MARK: - Lifecycle
 
     init(prefix: String, icloud: Bool) {
         self.storage = KeychainSwift(keyPrefix: prefix)
         self.storage.synchronizable = icloud
     }
 
-    //MARK: - KeyValueStorage
+    // MARK: - KeyValueStorage
 
     func setValue(value: Any?, forKey key: String) {
         if let string = value as? String {
@@ -31,7 +31,6 @@ class KeychainStorage: IKeychainStorage {
             self.storage.delete(key)
         }
     }
-
 
     func getValue(forKey key: String) -> Any? {
         if let string = self.storage.get(key) {
@@ -58,4 +57,3 @@ class KeychainStorage: IKeychainStorage {
         }
     }
 }
-

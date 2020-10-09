@@ -51,4 +51,3 @@ class Module1ViewController: UIViewController {
             .disposed(by: disposeBag)
     }
 }
-
