@@ -1,0 +1,7 @@
+#include "Pods/Target Support Files/Pods-CarRecognizer/Pods-CarRecognizer.release appstore.xcconfig"
+#include "Common.xcconfig"
+
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE
+
+PRODUCT_BUNDLE_IDENTIFIER = com.mishashemin.CarRecognizer
+APP_DISPLAY_NAME = CarRecognizer

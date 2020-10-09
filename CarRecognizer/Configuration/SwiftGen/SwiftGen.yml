@@ -1,0 +1,26 @@
+xcassets:
+  inputs:
+    - ../../Resources/Images.xcassets
+    - ../../Resources/Colors.xcassets
+  outputs:
+    - templateName: swift4
+      output: ../../Constants/Assets.swift
+
+ib:
+    inputs:
+    - "../../"
+    outputs:
+    - templateName: scenes-swift4
+      output: ../../Constants/Storyboards.swift
+
+strings:
+    inputs: ../../Resources/Localizable.strings
+    outputs:
+     - templateName: structured-swift4
+       output: ../../Constants/Strings.swift
+
+#fonts:
+#    inputs: ../../Resources/Fonts
+#    outputs:
+#     - templateName: swift4
+#       output: ../../Constants/Fonts.swift

@@ -1,0 +1,18 @@
+"Errors.Unknown.title" = "Неизвестная ошибка";
+"Errors.Unknown.description" = "";
+
+"Errors.CarRecognizerProvider.serverError.title" = "Ошибка";
+"Errors.CarRecognizerProvider.serverError.description" = "Произошла ошибка. Попробуйте позже";
+
+"Errors.CarRecognizerProvider.timeoutError.title" = "Ошибка по таймауту";
+"Errors.CarRecognizerProvider.timeoutError.description" = "Похоже, сервер слишком долго отвечает, повторите попытку через некоторое время";
+
+"Errors.CarRecognizerProvider.connectionFailed.title" = "Ошибка соединения";
+"Errors.CarRecognizerProvider.connectionFailed.description" = "Проверьте подключение к интернету и повторите снова";
+
+"Errors.CarRecognizerProvider.securityError.title" = "Ошибка";
+"Errors.CarRecognizerProvider.securityError.description" = "Требуется авторизация";
+
+"Errors.Moya.parsing.title" = "Ошибка";
+"Errors.Moya.parsing.description" = "Неверный ответ от сервера";
+
