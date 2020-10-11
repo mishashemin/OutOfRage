@@ -18,11 +18,6 @@ public extension ICarRecognizerTargetType {
             return URL(string: Constants.releasePath)!
         #endif
     }
-    
-    var headers: [String: String]? {
-        return
-            ["token": Constants.apiKey]
-    }
 
     var validationType: ValidationType {
         return .none

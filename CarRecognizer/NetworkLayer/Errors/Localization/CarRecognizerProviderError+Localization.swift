@@ -1,7 +1,6 @@
 import Foundation
 import Moya
 
-
 extension CarRecognizerProviderError: ICarRecognizerLocalizedError {
     public var info: (title: String, description: String?) {
         var result: (title: String, description: String?)
@@ -31,4 +30,3 @@ extension CarRecognizerProviderError: ICarRecognizerLocalizedError {
                 
     }
 }
-

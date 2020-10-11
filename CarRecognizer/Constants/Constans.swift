@@ -21,7 +21,11 @@ public struct Constants {
         #endif
     }
     
-    static let apiKey = "xyi"
+    static let VTBURLPath = "https://gw.hackathon.vtb.ru/vtb/hackathon"
+    static let recognizerApiKey = "2d952b2cc508f4103e3de4d276392dfd"
+    
+    static let passingProbability: Float = 0.8
+    static let maxImageSizeForRecognizing: Int = 500 * 1000
     
     public static let millisecondsBetweenRequests = 250
          

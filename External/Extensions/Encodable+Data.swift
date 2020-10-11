@@ -45,4 +45,3 @@ public extension Encodable {
     }
     
 }
-

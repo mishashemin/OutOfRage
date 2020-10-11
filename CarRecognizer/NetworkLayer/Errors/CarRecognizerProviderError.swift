@@ -1,6 +1,5 @@
 import Moya
 
-
 public enum CarRecognizerProviderErrorCode: Int, IBaseErrorCode {
     case serverError = 0
     case securityError = 1

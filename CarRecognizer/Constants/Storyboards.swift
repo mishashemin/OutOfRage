@@ -20,9 +20,11 @@ internal enum StoryboardScene {
   internal enum Main: StoryboardType {
     internal static let storyboardName = "Main"
 
-    internal static let module1ViewController = SceneType<CarRecognizer.Module1ViewController>(storyboard: Main.self, identifier: "Module1ViewController")
+    internal static let carListViewController = SceneType<CarRecognizer.CarListViewController>(storyboard: Main.self, identifier: "CarListViewController")
 
-    internal static let module2ViewController = SceneType<CarRecognizer.Module2ViewController>(storyboard: Main.self, identifier: "Module2ViewController")
+    internal static let currentCarViewController = SceneType<CarRecognizer.CurrentCarViewController>(storyboard: Main.self, identifier: "CurrentCarViewController")
+
+    internal static let module1ViewController = SceneType<CarRecognizer.MainPageViewController>(storyboard: Main.self, identifier: "Module1ViewController")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name

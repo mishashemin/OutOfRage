@@ -20,6 +20,8 @@ target 'CarRecognizer' do
   
   # Image
   pod 'Kingfisher', '~> 5.0'
+  pod 'ImagePicker'
+  pod 'IHProgressHUD'
 
   # Storage
   pod 'KeychainSwift', '~> 19.0'

@@ -8,13 +8,16 @@
 import RxSwift
 import RxRelay
 
-protocol IModule2ViewModel {
+protocol ICarListViewModel {
+    var carModels: [CarModel] { get }
+    
     func backAction()
+    func select(index: Int)
     
     var onBackAction: (() -> Void)? { get }
 }
 
-class Module2ViewModel: IModule2ViewModel {
+class CarListViewModel: ICarListViewModel {
     
     typealias Context = IAppContext
     
@@ -23,11 +26,15 @@ class Module2ViewModel: IModule2ViewModel {
         
     private let disposeBag = DisposeBag()
     
+    var carModels: [CarModel]
+    
     var onBackAction: (() -> Void)?
+    var onSelectAction: ((CarModel) -> Void)?
     
     // MARK: - Lifecycle
-    init(context: Context) {
+    init(context: Context, carModels: [CarModel]) {
         self.context = context
+        self.carModels = carModels
         setupRx()
     }
     
@@ -39,6 +46,10 @@ class Module2ViewModel: IModule2ViewModel {
     
     func backAction() {
         onBackAction?()
+    }
+    
+    func select(index: Int) {
+        onSelectAction?(carModels[index])
     }
     
     // MARK: - Private

@@ -1,24 +1,31 @@
 //
-//  Flow2ViewController.swift
-//  Demo
+//  CurrentCarViewController.swift
+//  CarRecognizer
 //
-//  Created by Mikhail Shemin on 30.09.2020.
+//  Created by Mikhail Shemin on 11.10.2020.
 //
 
 import UIKit
 import RxSwift
+import Kingfisher
 
-class Module2ViewController: UIViewController {
+class CurrentCarViewController: UIViewController {
 
     // MARK: - Outlets
-    
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var countryOfOriginLabel: UILabel!
+    @IBOutlet var generationLabel: UILabel!
+    @IBOutlet var bodyTypeLabel: UILabel!
+    @IBOutlet var carTypeLabel: UILabel!
+    @IBOutlet var iconImageView: UIImageView!
     // MARK: - Actions
     @objc func backAction() {
         viewModel.backAction()
     }
     
     // MARK: - Properties
-    var viewModel: IModule2ViewModel!
+    var viewModel: ICurrentCarViewModel!
     private(set) var disposeBag = DisposeBag()
     
     // MARK: - lifecycle
@@ -36,7 +43,6 @@ class Module2ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -49,10 +55,10 @@ class Module2ViewController: UIViewController {
 
     // MARK: - Private
     private func setupViews() {
-        self.navigationItem.title = "Module2"
-        self.setBarButtonItem(for: #selector(backAction))
+        nameLabel.text = viewModel.carModel.model + " " + viewModel.carModel.brand
     }
        
     private func bindToViewModel() {
+        self.setBarButtonItem(for: #selector(backAction))
     }
 }

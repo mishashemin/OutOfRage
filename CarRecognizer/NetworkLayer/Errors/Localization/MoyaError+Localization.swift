@@ -5,10 +5,10 @@ extension MoyaError: ICarRecognizerLocalizedError {
     public var info: (title: String, description: String?) {
         var result: (title: String, description: String?)
         switch self {
-        case .objectMapping(_, _):
+        case .objectMapping:
             result.title = L10n.Errors.Moya.Parsing.title
             result.description = L10n.Errors.Moya.Parsing.description
-        case .jsonMapping(_):
+        case .jsonMapping:
             result.title = L10n.Errors.Moya.Parsing.title
             result.description = L10n.Errors.Moya.Parsing.description
         case .underlying(let underlyingError, _):

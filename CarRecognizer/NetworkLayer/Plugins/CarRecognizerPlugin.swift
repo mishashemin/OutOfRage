@@ -37,13 +37,16 @@ open class CarRecognizerPlugin: PluginType {
     }
 
     public func process(_ result: Result<Response, MoyaError>, target: TargetType) -> Result<Response, MoyaError> {
-            let result = result
-
-            switch result {
-            case .failure(let error):
-                return .failure(error.carRecognizerConverter())
-            case .success:
-                return result
-            }
+        let result = result
+        if let log = try? result.get() {
+            let json = try? JSONSerialization.jsonObject(with: log.data, options: .allowFragments)
+            print(json)
+        }
+        switch result {
+        case .failure(let error):
+            return .failure(error.carRecognizerConverter())
+        case .success:
+            return result
+        }
     }
 }

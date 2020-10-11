@@ -5,7 +5,7 @@ extension Theme {
         textField.layer.borderWidth = 0
         textField.borderStyle = .none
         textField.leftViewMode = .always
-        textField.leftView = UIView(frame:CGRect(x:0, y:0, width:12, height:44))
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: 44))
         //textField.backgroundColor = Asset.Colors.grayBackground.color
         textField.layer.cornerRadius = 4
     }

@@ -1,13 +1,13 @@
 import Moya
 
 extension Error {
-    func localizedInfo() -> (title: String, description: String?)  {
+    func localizedInfo() -> (title: String, description: String?) {
         CarRecognizerError.getFrom(data: self)
     }
 }
 
 extension NSError {
-    func localizedInfo() -> (title: String, description: String?)  {
+    func localizedInfo() -> (title: String, description: String?) {
         CarRecognizerError.getFrom(data: self)
     }
 }

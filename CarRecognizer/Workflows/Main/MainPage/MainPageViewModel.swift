@@ -1,13 +1,13 @@
 import RxSwift
 import RxRelay
 
-protocol IModule1ViewModel {
-    func nextAction()
+protocol IMainPageViewModel {
+    func recognizeAction()
     
-    var onNextAction: (() -> Void)? { get }
+    var onRecognizeAction: (() -> Void)? { get }
 }
 
-class Module1ViewModel: IModule1ViewModel {
+class MainPageViewModel: IMainPageViewModel {
     
     typealias Context = IAppContext
     
@@ -16,7 +16,9 @@ class Module1ViewModel: IModule1ViewModel {
         
     private let disposeBag = DisposeBag()
     
-    var onNextAction: (() -> Void)?
+    var onRecognizeAction: (() -> Void)?
+    var onFavoritesAction: (() -> Void)?
+    var onDocumentsAction: (() -> Void)?
     
     // MARK: - Lifecycle
     init(context: Context) {
@@ -26,12 +28,12 @@ class Module1ViewModel: IModule1ViewModel {
     
     deinit {
         #if DEBUG
-        print("💭 deinit Module1ViewModel")
+        print("💭 deinit MainPageViewModel")
         #endif
     }
     
-    func nextAction() {
-        onNextAction?()
+    func recognizeAction() {
+        onRecognizeAction?()
     }
     
     // MARK: - Private

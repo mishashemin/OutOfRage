@@ -1,6 +1,10 @@
 "Errors.Unknown.title" = "Неизвестная ошибка";
 "Errors.Unknown.description" = "";
 
+"Errors.RecognizerService.title" = "Ошибка";
+"Errors.RecognizerService.RecognizeError.description" = "Машина не распознана";
+"Errors.RecognizerService.ImageFormatError.description" = "Неверный формат фотографии";
+
 "Errors.CarRecognizerProvider.serverError.title" = "Ошибка";
 "Errors.CarRecognizerProvider.serverError.description" = "Произошла ошибка. Попробуйте позже";
 

@@ -46,6 +46,18 @@ internal enum L10n {
         internal static let title = L10n.tr("Localizable", "Errors.Moya.parsing.title")
       }
     }
+    internal enum RecognizerService {
+      /// Ошибка
+      internal static let title = L10n.tr("Localizable", "Errors.RecognizerService.title")
+      internal enum ImageFormatError {
+        /// Неверный формат фотографии
+        internal static let description = L10n.tr("Localizable", "Errors.RecognizerService.ImageFormatError.description")
+      }
+      internal enum RecognizeError {
+        /// Машина не распознана
+        internal static let description = L10n.tr("Localizable", "Errors.RecognizerService.RecognizeError.description")
+      }
+    }
     internal enum Unknown {
       /// 
       internal static let description = L10n.tr("Localizable", "Errors.Unknown.description")

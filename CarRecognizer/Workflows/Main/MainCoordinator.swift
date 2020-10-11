@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import RxSwift
 
 class MainCoordinator: BaseCoordinator {
     
@@ -8,6 +9,7 @@ class MainCoordinator: BaseCoordinator {
     // MARK: - Properties
     var router: Router
     let context: IAppContext
+    let disposeBag = DisposeBag()
     
     // MARK: - Lifecycle
     init(router: Router, context: IAppContext) {
@@ -26,8 +28,13 @@ class MainCoordinator: BaseCoordinator {
         #endif
     }
     
-    func goToModule2() {
-        let controller = self.buildModule2ViewController()
+    func goToCarList(cars: [CarModel]) {
+        let controller = self.buildCarListViewController(cars: cars)
+        self.router.push(controller)
+    }
+    
+    func goToCurrentCar(car: CarModel) {
+        let controller = self.buildCurrentCarViewController(car: car)
         self.router.push(controller)
     }
 }

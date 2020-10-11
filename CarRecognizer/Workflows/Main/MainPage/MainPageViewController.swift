@@ -2,15 +2,15 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class Module1ViewController: UIViewController {
+class MainPageViewController: UIViewController {
 
     // MARK: - Outlets
-    @IBOutlet var button: UIButton!
+    @IBOutlet var recognizeButton: UIButton!
     
     // MARK: - Actions
     
     // MARK: - Properties
-    var viewModel: IModule1ViewModel!
+    var viewModel: IMainPageViewModel!
     private(set) var disposeBag = DisposeBag()
     
     // MARK: - lifecycle
@@ -41,12 +41,13 @@ class Module1ViewController: UIViewController {
 
     // MARK: - Private
     private func setupViews() {
+        recognizeButton.layer.cornerRadius = 8
     }
        
     private func bindToViewModel() {
-        button.rx.tap
+        recognizeButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.viewModel.nextAction()
+                self?.viewModel.recognizeAction()
             })
             .disposed(by: disposeBag)
     }
