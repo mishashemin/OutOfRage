@@ -52,7 +52,7 @@ class CarImagePickerViewModel: NSObject, ImagePickerDelegate {
             case .success(let recognizedCars):
                 imagePicker.dismiss(animated: true, completion: { [weak self] in
                     var carModels: [CarModel] = []
-                    carModels.append(CarModel(model: "модель", brand: "брэнд", price: 1000000, countryOfOrigin: "Хз", generation: "генерация", bodyType: "", carType: "", iconUrl: "https://motor.ru/thumb/0x1200/filters:quality(75):no_upscale()/imgs/2018/01/03/21/1434673/2030696e747f3dea82f93f0484ae03faf530c1e2.jpg"))
+                    carModels.append(CarModel(model: recognizedCars[0], brand: "", price: 1000000, countryOfOrigin: "Хз", generation: "генерация", bodyType: "", carType: "", iconUrl: "https://motor.ru/thumb/0x1200/filters:quality(75):no_upscale()/imgs/2018/01/03/21/1434673/2030696e747f3dea82f93f0484ae03faf530c1e2.jpg"))
                     self?.onRecognizeEvent?(carModels)
                 })
             case .error(let error):
@@ -68,11 +68,6 @@ class CarImagePickerViewModel: NSObject, ImagePickerDelegate {
     }
     
     func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
-        imagePicker.dismiss(animated: true, completion: { [weak self] in
-            var carModels: [CarModel] = []
-            carModels.append(CarModel(model: "модель", brand: "брэнд", price: 1000000, countryOfOrigin: "Хз", generation: "генерация", bodyType: "", carType: "", iconUrl: "https://motor.ru/thumb/0x1200/filters:quality(75):no_upscale()/imgs/2018/01/03/21/1434673/2030696e747f3dea82f93f0484ae03faf530c1e2.jpg"))
-            carModels.append(CarModel(model: "модель", brand: "брэнд", price: 1000000, countryOfOrigin: "Хз", generation: "генерация", bodyType: "", carType: "", iconUrl: "https://motor.ru/thumb/0x1200/filters:quality(75):no_upscale()/imgs/2018/01/03/21/1434673/2030696e747f3dea82f93f0484ae03faf530c1e2.jpg"))
-            self?.onRecognizeEvent?(carModels)
-        })
+        imagePicker.dismiss(animated: true, completion: nil)
     }
 }

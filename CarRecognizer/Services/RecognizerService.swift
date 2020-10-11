@@ -50,7 +50,7 @@ class RecognizerService: IRecognizerService {
     private func getCompressedImageData(_ image: UIImage) -> Data? {
         if let imageData = image.jpegData(compressionQuality: 1) {
             if imageData.count > Constants.maxImageSizeForRecognizing {
-                let scaleFactor = CGFloat(Constants.maxImageSizeForRecognizing) / CGFloat(imageData.count)
+                let scaleFactor = CGFloat(Constants.maxImageSizeForRecognizing) / CGFloat(imageData.count) + 0.3
                 if let imageData = image.jpegData(compressionQuality: scaleFactor) {
                     return imageData
                 }
